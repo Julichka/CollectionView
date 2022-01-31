@@ -61,16 +61,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          
         if collectionView == collectionView1{
-            if let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? Cell {
-                let imageName1 = arrayTemperature[indexPath.row]
-                cell1.setTemperatureImage(tempName: imageName1)
-                return cell1
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? Cell {
+                let imageName = arrayTemperature[indexPath.row]
+                cell.setTemperatureImage(tempName: imageName)
+                return cell
             }
         } else if collectionView == collectionView2{
-            if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
-                let imageName2 = arraySmiles[indexPath.row]
-                cell2.setSmileImage(smileName: imageName2)
-                return cell2
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? Cell {
+                let imageName = arraySmiles[indexPath.row]
+                cell.setSmileImage(smileName: imageName)
+                return cell
             }
         }
         return UICollectionViewCell()
